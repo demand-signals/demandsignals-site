@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '/../../../includes/config.php';
+require_once __DIR__ . '/../../includes/config.php';
 $page_title    = 'Brand Identity & Design — Look Like You Mean It | Demand Signals';
 $page_desc     = 'Brand identity systems, logo design, visual language, and design systems for businesses that want to look as good as they perform. No generic templates.';
 $page_canonical = SITE_URL . '/services/brand-design';
-include __DIR__ . '/../../../includes/head.php';
-include __DIR__ . '/../../../includes/nav.php';
+include __DIR__ . '/../../includes/head.php';
+include __DIR__ . '/../../includes/nav.php';
 ?>
 <main id="main-content">
 
@@ -34,4 +34,4 @@ include __DIR__ . '/../../../includes/nav.php';
   <section class="cta-band"><div class="container"><h2>First Impressions Are Permanent.</h2><p>Let's make yours count. Brand projects start at $2,500.</p><a href="/contact" class="btn btn-primary btn-lg">Start My Brand →</a></div></section>
 
 </main>
-<?php include __DIR__ . '/../../../includes/footer.php'; ?>
+<?php include __DIR__ . '/../../includes/footer.php'; ?>

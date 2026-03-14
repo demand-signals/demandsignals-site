@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '/../../../includes/config.php';
+require_once __DIR__ . '/../../includes/config.php';
 $page_title    = 'GEO & LLM Optimization — Get Found by ChatGPT, Perplexity & Gemini | Demand Signals';
 $page_desc     = 'Generative Engine Optimization (GEO) makes your business the answer when AI systems like ChatGPT, Perplexity, and Gemini respond to buyer questions. The new SEO — and almost nobody is doing it yet.';
 $page_canonical = SITE_URL . '/ai-agents/geo-llm';
-include __DIR__ . '/../../../includes/head.php';
-include __DIR__ . '/../../../includes/nav.php';
+include __DIR__ . '/../../includes/head.php';
+include __DIR__ . '/../../includes/nav.php';
 ?>
 <main id="main-content">
 
@@ -80,4 +80,4 @@ include __DIR__ . '/../../../includes/nav.php';
   <section class="cta-band"><div class="container"><h2>Be The Answer, Not The Also-Ran.</h2><p>GEO authority takes 3-6 months to build. The best time to start was last year. The second best time is now.</p><a href="/contact" class="btn btn-primary btn-lg">Start GEO Optimization →</a></div></section>
 
 </main>
-<?php include __DIR__ . '/../../../includes/footer.php'; ?>
+<?php include __DIR__ . '/../../includes/footer.php'; ?>

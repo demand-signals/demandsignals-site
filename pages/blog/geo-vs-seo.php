@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../../../includes/config.php';
+require_once __DIR__ . '/../../includes/config.php';
 $post = [
   'title'    => 'GEO vs SEO: Why Generative Engine Optimization Is the New Battleground for Local Businesses',
   'slug'     => 'geo-vs-seo',
@@ -12,8 +12,8 @@ $post = [
 $page_title    = $post['title'] . ' | Demand Signals';
 $page_desc     = $post['excerpt'];
 $page_canonical = SITE_URL . '/blog/' . $post['slug'];
-include __DIR__ . '/../../../includes/head.php';
-include __DIR__ . '/../../../includes/nav.php';
+include __DIR__ . '/../../includes/head.php';
+include __DIR__ . '/../../includes/nav.php';
 ?>
 <main id="main-content">
 <article>
@@ -117,4 +117,4 @@ include __DIR__ . '/../../../includes/nav.php';
   </section>
 </article>
 </main>
-<?php include __DIR__ . '/../../../includes/footer.php'; ?>
+<?php include __DIR__ . '/../../includes/footer.php'; ?>

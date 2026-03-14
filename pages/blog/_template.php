@@ -4,7 +4,7 @@
 // Filename = slug (e.g. pages/blog/your-slug.php)
 // Agent: Jasper uses this template. Fill in $post array only.
 // ============================================================
-require_once __DIR__ . '/../../../includes/config.php';
+require_once __DIR__ . '/../../includes/config.php';
 
 // ── Post data ── Agent: edit these fields ──────────────────────
 $post = [
@@ -21,8 +21,8 @@ $post = [
 $page_title    = $post['title'] . ' | Demand Signals';
 $page_desc     = $post['excerpt'];
 $page_canonical = SITE_URL . '/blog/' . $post['slug'];
-include __DIR__ . '/../../../includes/head.php';
-include __DIR__ . '/../../../includes/nav.php';
+include __DIR__ . '/../../includes/head.php';
+include __DIR__ . '/../../includes/nav.php';
 ?>
 <main id="main-content">
 
@@ -90,4 +90,4 @@ include __DIR__ . '/../../../includes/nav.php';
   </article>
 
 </main>
-<?php include __DIR__ . '/../../../includes/footer.php'; ?>
+<?php include __DIR__ . '/../../includes/footer.php'; ?>

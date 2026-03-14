@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '/../../../includes/config.php';
+require_once __DIR__ . '/../../includes/config.php';
 $page_title    = 'Google My Business Management — Expert GMB Service | Demand Signals';
 $page_desc     = 'Professional Google My Business management — weekly posts, photo optimization, review responses, Q&A, and category optimization. Get more calls from your GMB profile.';
 $page_canonical = SITE_URL . '/services/gmb';
-include __DIR__ . '/../../../includes/head.php';
-include __DIR__ . '/../../../includes/nav.php';
+include __DIR__ . '/../../includes/head.php';
+include __DIR__ . '/../../includes/nav.php';
 ?>
 <main id="main-content">
 
@@ -34,4 +34,4 @@ include __DIR__ . '/../../../includes/nav.php';
   <section class="cta-band"><div class="container"><h2>Is Your GMB Profile Working As Hard As You Are?</h2><p>We'll audit it for free and show you exactly what's costing you calls.</p><a href="/contact" class="btn btn-primary btn-lg">Get My Free GMB Audit →</a></div></section>
 
 </main>
-<?php include __DIR__ . '/../../../includes/footer.php'; ?>
+<?php include __DIR__ . '/../../includes/footer.php'; ?>

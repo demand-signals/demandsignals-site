@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '/../../../includes/config.php';
+require_once __DIR__ . '/../../includes/config.php';
 $page_title    = 'Content Marketing — AI-Powered Content at Scale | Demand Signals';
 $page_desc     = 'Daily blog posts, service pages, and social content — researched by AI, written for humans, optimized for Google and generative AI. Content marketing that actually moves the needle.';
 $page_canonical = SITE_URL . '/services/content';
-include __DIR__ . '/../../../includes/head.php';
-include __DIR__ . '/../../../includes/nav.php';
+include __DIR__ . '/../../includes/head.php';
+include __DIR__ . '/../../includes/nav.php';
 ?>
 <main id="main-content">
 
@@ -46,4 +46,4 @@ include __DIR__ . '/../../../includes/nav.php';
   <section class="cta-band"><div class="container"><h2>Content Without Strategy Is Just Noise.</h2><p>Let's build a content engine that compounds month over month.</p><a href="/contact" class="btn btn-primary btn-lg">Build My Content Engine →</a></div></section>
 
 </main>
-<?php include __DIR__ . '/../../../includes/footer.php'; ?>
+<?php include __DIR__ . '/../../includes/footer.php'; ?>

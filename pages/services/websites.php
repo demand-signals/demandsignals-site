@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '/../../../includes/config.php';
+require_once __DIR__ . '/../../includes/config.php';
 $page_title    = 'Website & Web App Development — Built to Rank & Convert | Demand Signals';
 $page_desc     = 'We build fast, database-driven websites and web apps — React, custom PHP, Base44. Not templates. Real applications engineered for search, GEO, and lead generation.';
 $page_canonical = SITE_URL . '/services/websites';
-include __DIR__ . '/../../../includes/head.php';
-include __DIR__ . '/../../../includes/nav.php';
+include __DIR__ . '/../../includes/head.php';
+include __DIR__ . '/../../includes/nav.php';
 ?>
 <main id="main-content">
 
@@ -87,4 +87,4 @@ include __DIR__ . '/../../../includes/nav.php';
   <section class="cta-band"><div class="container"><h2>Your Competitors' Sites Are Average. Be the Exception.</h2><p>Let's build something that actually gets found and actually converts.</p><a href="/contact" class="btn btn-primary btn-lg">Start My Build →</a></div></section>
 
 </main>
-<?php include __DIR__ . '/../../../includes/footer.php'; ?>
+<?php include __DIR__ . '/../../includes/footer.php'; ?>

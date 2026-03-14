@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '/../../../includes/config.php';
+require_once __DIR__ . '/../../includes/config.php';
 $page_title    = 'Workflow Automation — AI-Powered Business Automation | Demand Signals';
 $page_desc     = 'Replace manual, repetitive business tasks with intelligent automations. CRM updates, follow-up sequences, reporting, scheduling — all hands-free with AI workflow automation.';
 $page_canonical = SITE_URL . '/ai-agents/automation';
-include __DIR__ . '/../../../includes/head.php';
-include __DIR__ . '/../../../includes/nav.php';
+include __DIR__ . '/../../includes/head.php';
+include __DIR__ . '/../../includes/nav.php';
 ?>
 <main id="main-content">
 
@@ -76,4 +76,4 @@ include __DIR__ . '/../../../includes/nav.php';
   <section class="cta-band"><div class="container"><h2>What Would You Do With 10 Hours a Week Back?</h2><p>Most clients save 8-15 hours of manual work per week in the first month. Let's find yours.</p><a href="/contact" class="btn btn-primary btn-lg">Start Automating →</a></div></section>
 
 </main>
-<?php include __DIR__ . '/../../../includes/footer.php'; ?>
+<?php include __DIR__ . '/../../includes/footer.php'; ?>

@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '/../../../includes/config.php';
+require_once __DIR__ . '/../../includes/config.php';
 $page_title    = 'Agent Infrastructure — AI Ops Stack Setup | Demand Signals';
 $page_desc     = 'We design and deploy the full technical infrastructure behind AI agent systems — secrets management, compute, deployment pipelines, monitoring, and agent communication layers.';
 $page_canonical = SITE_URL . '/ai-agents/infrastructure';
-include __DIR__ . '/../../../includes/head.php';
-include __DIR__ . '/../../../includes/nav.php';
+include __DIR__ . '/../../includes/head.php';
+include __DIR__ . '/../../includes/nav.php';
 ?>
 <main id="main-content">
 
@@ -53,4 +53,4 @@ include __DIR__ . '/../../../includes/nav.php';
   <section class="cta-band"><div class="container"><h2>Agent Infrastructure Done Right.</h2><p>Most agent systems fail in production because the infrastructure wasn't built for it. Ours was.</p><a href="/contact" class="btn btn-primary btn-lg">Let's Talk Infrastructure →</a></div></section>
 
 </main>
-<?php include __DIR__ . '/../../../includes/footer.php'; ?>
+<?php include __DIR__ . '/../../includes/footer.php'; ?>

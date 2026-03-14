@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '/../../../includes/config.php';
+require_once __DIR__ . '/../../includes/config.php';
 $page_title    = 'Demand Links — Smart Link Manager | Demand Signals';
 $page_desc     = 'Trackable, manageable short links for your business. Create branded short links, track clicks, and route traffic intelligently — built for local businesses and agencies.';
 $page_canonical = SITE_URL . '/tools/demand-links';
-include __DIR__ . '/../../../includes/head.php';
-include __DIR__ . '/../../../includes/nav.php';
+include __DIR__ . '/../../includes/head.php';
+include __DIR__ . '/../../includes/nav.php';
 ?>
 <main id="main-content">
 
@@ -43,4 +43,4 @@ include __DIR__ . '/../../../includes/nav.php';
   <section class="cta-band"><div class="container"><h2>Want Early Access?</h2><p>We're building Demand Links for our own clients first. Get on the list.</p><a href="/contact" class="btn btn-primary btn-lg">Get Early Access →</a></div></section>
 
 </main>
-<?php include __DIR__ . '/../../../includes/footer.php'; ?>
+<?php include __DIR__ . '/../../includes/footer.php'; ?>

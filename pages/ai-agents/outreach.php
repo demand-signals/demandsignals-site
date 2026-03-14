@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '/../../../includes/config.php';
+require_once __DIR__ . '/../../includes/config.php';
 $page_title    = 'AI-Powered Outreach — Automated Prospecting & Follow-Up | Demand Signals';
 $page_desc     = 'AI outreach systems that identify prospects, personalize messaging, send sequences, and log everything to your CRM — without a sales rep doing the legwork.';
 $page_canonical = SITE_URL . '/ai-agents/outreach';
-include __DIR__ . '/../../../includes/head.php';
-include __DIR__ . '/../../../includes/nav.php';
+include __DIR__ . '/../../includes/head.php';
+include __DIR__ . '/../../includes/nav.php';
 ?>
 <main id="main-content">
 
@@ -52,4 +52,4 @@ include __DIR__ . '/../../../includes/nav.php';
   <section class="cta-band"><div class="container"><h2>Stop Cold Calling. Start Warm Conversations.</h2><p>Our clients average 15-30 qualified conversations per month from a standing start. Let's build your pipeline.</p><a href="/contact" class="btn btn-primary btn-lg">Build My Pipeline →</a></div></section>
 
 </main>
-<?php include __DIR__ . '/../../../includes/footer.php'; ?>
+<?php include __DIR__ . '/../../includes/footer.php'; ?>

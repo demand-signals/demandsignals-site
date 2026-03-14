@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '/../../../includes/config.php';
+require_once __DIR__ . '/../../includes/config.php';
 $page_title    = 'AI Voice Systems (VAPI) — AI Receptionist | Demand Signals';
 $page_desc     = 'AI-powered phone systems that answer calls, qualify leads, and book appointments 24/7. VAPI-powered voice agents for inbound and outbound — never miss a prospect again.';
 $page_canonical = SITE_URL . '/ai-agents/voice';
-include __DIR__ . '/../../../includes/head.php';
-include __DIR__ . '/../../../includes/nav.php';
+include __DIR__ . '/../../includes/head.php';
+include __DIR__ . '/../../includes/nav.php';
 ?>
 <main id="main-content">
 
@@ -91,4 +91,4 @@ include __DIR__ . '/../../../includes/nav.php';
   <section class="cta-band"><div class="container"><h2>Stop Losing Leads to Voicemail.</h2><p>Every missed call is a missed sale. Let's fix that in 2 weeks.</p><a href="/contact" class="btn btn-primary btn-lg">Set Up AI Voice →</a></div></section>
 
 </main>
-<?php include __DIR__ . '/../../../includes/footer.php'; ?>
+<?php include __DIR__ . '/../../includes/footer.php'; ?>

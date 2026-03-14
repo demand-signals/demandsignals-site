@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '/../../../includes/config.php';
+require_once __DIR__ . '/../../includes/config.php';
 $page_title    = 'Dynamic QR Codes — Update Without Reprinting | Demand Signals';
 $page_desc     = 'Dynamic QR codes that can be updated after printing. Change the destination URL anytime — no new print run needed. Track scans with analytics.';
 $page_canonical = SITE_URL . '/tools/dynamic-qr';
-include __DIR__ . '/../../../includes/head.php';
-include __DIR__ . '/../../../includes/nav.php';
+include __DIR__ . '/../../includes/head.php';
+include __DIR__ . '/../../includes/nav.php';
 ?>
 <main id="main-content">
 
@@ -53,4 +53,4 @@ include __DIR__ . '/../../../includes/nav.php';
   <section class="cta-band"><div class="container"><h2>Stop Reprinting. Start Redirecting.</h2><p>Every printed material you have can become dynamic. Let's talk.</p><a href="/contact" class="btn btn-primary btn-lg">Get Dynamic QR →</a></div></section>
 
 </main>
-<?php include __DIR__ . '/../../../includes/footer.php'; ?>
+<?php include __DIR__ . '/../../includes/footer.php'; ?>

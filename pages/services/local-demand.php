@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '/../../../includes/config.php';
+require_once __DIR__ . '/../../includes/config.php';
 $page_title    = 'Local Demand Generation — Dominate Your Market | Demand Signals';
 $page_desc     = 'GMB management, local SEO, review platforms, longtail content, and GEO optimization for local businesses. Dominate search in your market before your competitors know they\'re losing.';
 $page_canonical = SITE_URL . '/services/local-demand';
-include __DIR__ . '/../../../includes/head.php';
-include __DIR__ . '/../../../includes/nav.php';
+include __DIR__ . '/../../includes/head.php';
+include __DIR__ . '/../../includes/nav.php';
 ?>
 <main id="main-content">
 
@@ -73,4 +73,4 @@ include __DIR__ . '/../../../includes/nav.php';
   <section class="cta-band"><div class="container"><h2>Your Competitors Are Getting Found. Are You?</h2><p>We'll show you exactly where your demand gaps are — free, no obligation.</p><a href="/contact" class="btn btn-primary btn-lg">Get My Free Demand Audit →</a></div></section>
 
 </main>
-<?php include __DIR__ . '/../../../includes/footer.php'; ?>
+<?php include __DIR__ . '/../../includes/footer.php'; ?>

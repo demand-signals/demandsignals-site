@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '/../../../includes/config.php';
+require_once __DIR__ . '/../../includes/config.php';
 $page_title    = 'Free Demand Audit — See Where You\'re Missing Leads | Demand Signals';
 $page_desc     = 'Enter your business info and get an instant demand gap analysis — GMB health, website score, review standing, and where your competitors are outranking you.';
 $page_canonical = SITE_URL . '/tools/demand-audit';
-include __DIR__ . '/../../../includes/head.php';
-include __DIR__ . '/../../../includes/nav.php';
+include __DIR__ . '/../../includes/head.php';
+include __DIR__ . '/../../includes/nav.php';
 ?>
 <main id="main-content">
 
@@ -100,4 +100,4 @@ document.getElementById('audit-form').addEventListener('submit', function(e) {
     .catch(() => form.submit());
 });
 </script>
-<?php include __DIR__ . '/../../../includes/footer.php'; ?>
+<?php include __DIR__ . '/../../includes/footer.php'; ?>

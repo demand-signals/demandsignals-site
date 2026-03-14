@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '/../../../includes/config.php';
+require_once __DIR__ . '/../../includes/config.php';
 $page_title    = 'AI Agent Farms — Custom Multi-Agent Workforce | Demand Signals';
 $page_desc     = 'We build custom AI agent farms for businesses — autonomous networks of AI agents that research, write, outreach, and operate 24/7. We run 19 ourselves.';
 $page_canonical = SITE_URL . '/ai-agents/agent-farms';
-include __DIR__ . '/../../../includes/head.php';
-include __DIR__ . '/../../../includes/nav.php';
+include __DIR__ . '/../../includes/head.php';
+include __DIR__ . '/../../includes/nav.php';
 ?>
 <main id="main-content">
 
@@ -83,4 +83,4 @@ include __DIR__ . '/../../../includes/nav.php';
   <section class="cta-band"><div class="container"><h2>Ready to Stop Trading Hours for Dollars?</h2><p>Your competitors will have agent farms within 18 months. The question is whether you're first or catching up.</p><a href="/contact" class="btn btn-primary btn-lg">Start My Agent Farm →</a></div></section>
 
 </main>
-<?php include __DIR__ . '/../../../includes/footer.php'; ?>
+<?php include __DIR__ . '/../../includes/footer.php'; ?>
