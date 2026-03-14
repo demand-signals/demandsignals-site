@@ -2,6 +2,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/demandsignals/public_html/
+    - chmod 755 $DEPLOYPATH
     - /bin/cp -R $HOME/repositories/demandsignals-site/css $DEPLOYPATH
     - /bin/cp -R $HOME/repositories/demandsignals-site/js $DEPLOYPATH
     - /bin/cp -R $HOME/repositories/demandsignals-site/img $DEPLOYPATH
@@ -12,3 +13,6 @@ deployment:
     - /bin/cp $HOME/repositories/demandsignals-site/404.php $DEPLOYPATH
     - /bin/cp $HOME/repositories/demandsignals-site/.htaccess $DEPLOYPATH
     - /bin/cp $HOME/repositories/demandsignals-site/deploy.php $DEPLOYPATH
+    - chmod 755 $DEPLOYPATH
+    - find $DEPLOYPATH -type d -exec chmod 755 {} \;
+    - find $DEPLOYPATH -type f -exec chmod 644 {} \;
