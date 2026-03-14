@@ -10,6 +10,9 @@ DirectoryIndex index.php index.html
 RewriteEngine On
 RewriteBase /
 
+# ── Pass real .php files directly (deploy.php, 404.php, etc) ─
+RewriteRule \.php$ - [L]
+
 # ── Always pass static assets directly ────────────────────────
 RewriteRule \.(css|js|png|jpg|jpeg|gif|webp|svg|ico|woff|woff2|ttf|eot|mp4|pdf)$ - [L]
 
@@ -17,7 +20,6 @@ RewriteRule \.(css|js|png|jpg|jpeg|gif|webp|svg|ico|woff|woff2|ttf|eot|mp4|pdf)$
 RewriteRule ^robots\.txt$ /api/robots.php [L]
 RewriteRule ^sitemap\.xml$ /api/sitemap.php [L]
 RewriteRule ^llms\.txt$ /api/llms.php [L]
-RewriteRule ^deploy\.php$ /deploy.php [L]
 
 # ── Dynamic routing (skip real files/dirs) ────────────────────
 RewriteCond %{REQUEST_FILENAME} !-f
