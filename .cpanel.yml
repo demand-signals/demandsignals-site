@@ -2,4 +2,12 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/demandsignals/public_html/
-    - /bin/cp -R . $DEPLOYPATH
+    - /bin/cp -R css $DEPLOYPATH
+    - /bin/cp -R js $DEPLOYPATH
+    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp -R includes $DEPLOYPATH
+    - /bin/cp -R pages $DEPLOYPATH
+    - /bin/cp -R api $DEPLOYPATH
+    - /bin/cp index.php $DEPLOYPATH
+    - /bin/cp 404.php $DEPLOYPATH
+    - /bin/cp .htaccess $DEPLOYPATH
