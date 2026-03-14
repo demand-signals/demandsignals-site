@@ -1,7 +1,5 @@
 // ============================================================
-// DEMAND SIGNALS — MAIN JS
-// Agent: this file is safe to extend. Do not remove existing
-// event listeners without testing nav/dropdowns/mobile.
+// DEMAND SIGNALS — MAIN JS v2.0
 // ============================================================
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -20,15 +18,12 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.dropdown-trigger').forEach(function (btn) {
     btn.addEventListener('click', function () {
       const expanded = this.getAttribute('aria-expanded') === 'true';
-      // Close all others
       document.querySelectorAll('.dropdown-trigger').forEach(function (b) {
         b.setAttribute('aria-expanded', 'false');
       });
       this.setAttribute('aria-expanded', !expanded);
     });
   });
-
-  // Close dropdowns on outside click
   document.addEventListener('click', function (e) {
     if (!e.target.closest('.has-dropdown')) {
       document.querySelectorAll('.dropdown-trigger').forEach(function (b) {
@@ -41,21 +36,16 @@ document.addEventListener('DOMContentLoaded', function () {
   const nav = document.querySelector('.site-nav');
   if (nav) {
     window.addEventListener('scroll', function () {
-      if (window.scrollY > 60) {
-        nav.style.background = 'rgba(29,35,48,0.98)';
-      } else {
-        nav.style.background = 'rgba(29,35,48,0.95)';
-      }
+      nav.classList.toggle('scrolled', window.scrollY > 60);
     }, { passive: true });
   }
 
-  // ── Escape key closes dropdowns / panels ──────────────────
+  // ── Escape key ────────────────────────────────────────────
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
       document.querySelectorAll('.dropdown-trigger').forEach(function (b) {
         b.setAttribute('aria-expanded', 'false');
       });
-      // Close contact bot
       const panel = document.getElementById('contact-bot-panel');
       const trig  = document.getElementById('contact-bot-trigger');
       if (panel && !panel.hidden) {
@@ -66,25 +56,72 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // ── Animate on scroll (simple intersection observer) ──────
-  const animTargets = document.querySelectorAll('.service-card, .process-step, .portfolio-card, .testimonial-card, .stat-item');
+  // ── Scroll Reveal ─────────────────────────────────────────
+  // Add .reveal class to all animatable elements
+  const revealSelectors = [
+    '.service-card', '.process-step', '.portfolio-card',
+    '.testimonial-card', '.stat-item', '.section-header',
+    '.geo-list li', '.cta-inner'
+  ];
+  revealSelectors.forEach(function(sel, sIdx) {
+    document.querySelectorAll(sel).forEach(function (el, i) {
+      if (!el.classList.contains('reveal')) {
+        el.classList.add('reveal');
+        // Stagger within parent
+        const delay = Math.min(i * 0.08, 0.5);
+        el.style.transitionDelay = delay + 's';
+      }
+    });
+  });
+
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
+          entry.target.classList.add('visible');
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-    animTargets.forEach(function (el) {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(20px)';
-      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    document.querySelectorAll('.reveal').forEach(function (el) {
       observer.observe(el);
     });
+  } else {
+    // Fallback: show everything
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      el.classList.add('visible');
+    });
   }
+
+  // ── Smooth counter animation for stats ───────────────────
+  function animateCounter(el) {
+    const target = parseFloat(el.textContent.replace(/[^0-9.]/g, ''));
+    const suffix = el.textContent.replace(/[0-9.]/g, '');
+    if (!target || isNaN(target)) return;
+    const duration = 1800;
+    const start = performance.now();
+    function update(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      const value = Math.round(ease * target * 10) / 10;
+      el.textContent = (Number.isInteger(target) ? Math.round(value) : value) + suffix;
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  }
+
+  const statsObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.stat-num').forEach(animateCounter);
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  const statsSection = document.querySelector('.stats-bar');
+  if (statsSection) statsObserver.observe(statsSection);
 
 });

@@ -52,7 +52,7 @@ include __DIR__ . '/includes/nav.php';
   <!-- ══ STATS ══════════════════════════════════════════════════ -->
   <section class="stats-bar section-sm" aria-label="Agency stats">
     <div class="container">
-      <div class="stats-bar" style="padding:0">
+      <div class="stats-grid">
         <div class="stat-item"><div class="stat-num">19</div><div class="stat-label">Active AI Agents</div></div>
         <div class="stat-item"><div class="stat-num">50+</div><div class="stat-label">Clients Served</div></div>
         <div class="stat-item"><div class="stat-num">3x</div><div class="stat-label">Avg Lead Growth</div></div>
