@@ -53,10 +53,10 @@ include __DIR__ . '/includes/nav.php';
   <section class="stats-bar section-sm" aria-label="Agency stats">
     <div class="container">
       <div class="stats-grid">
-        <div class="stat-item"><div class="stat-num">19</div><div class="stat-label">Active AI Agents</div></div>
-        <div class="stat-item"><div class="stat-num">50+</div><div class="stat-label">Clients Served</div></div>
-        <div class="stat-item"><div class="stat-num">3x</div><div class="stat-label">Avg Lead Growth</div></div>
-        <div class="stat-item"><div class="stat-num">24/7</div><div class="stat-label">Always On Systems</div></div>
+        <div class="stat-item reveal reveal-delay-1"><div class="stat-num">19</div><div class="stat-label">Active AI Agents</div></div>
+        <div class="stat-item reveal reveal-delay-2"><div class="stat-num">50+</div><div class="stat-label">Clients Served</div></div>
+        <div class="stat-item reveal reveal-delay-3"><div class="stat-num">3x</div><div class="stat-label">Avg Lead Growth</div></div>
+        <div class="stat-item reveal reveal-delay-4"><div class="stat-num">24/7</div><div class="stat-label">Always On Systems</div></div>
       </div>
     </div>
   </section>
@@ -64,49 +64,49 @@ include __DIR__ . '/includes/nav.php';
   <!-- ══ WHAT WE DO ═════════════════════════════════════════════ -->
   <section class="section bg-light" aria-labelledby="services-heading">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="eyebrow">What We Do</span>
         <h2 id="services-heading">Five Ways We Generate Demand</h2>
         <p>We don't do everything. We do five things exceptionally well — and each one compounds on the others.</p>
       </div>
       <div class="service-grid">
 
-        <article class="service-card">
+        <article class="service-card reveal reveal-delay-1">
           <div class="service-card-icon">🌐</div>
           <h3>Websites &amp; Web Apps</h3>
           <p>Fast, database-driven sites built to rank, convert, and scale. Not templates — real applications that do the work of a full sales team.</p>
           <a href="/services/websites" class="card-link">Learn more</a>
         </article>
 
-        <article class="service-card">
+        <article class="service-card reveal reveal-delay-2">
           <div class="service-card-icon">🤖</div>
           <h3>AI Agent Farms</h3>
           <p>Custom-built networks of autonomous AI agents that research, write, outreach, and optimize — 24/7, without payroll. We run 19 ourselves.</p>
           <a href="/ai-agents/agent-farms" class="card-link">Learn more</a>
         </article>
 
-        <article class="service-card">
+        <article class="service-card reveal reveal-delay-3">
           <div class="service-card-icon">🎙️</div>
           <h3>AI Voice Systems</h3>
           <p>VAPI-powered AI receptionists that answer calls, qualify leads, book appointments, and never miss a prospect — even at 2am.</p>
           <a href="/ai-agents/voice" class="card-link">Learn more</a>
         </article>
 
-        <article class="service-card">
+        <article class="service-card reveal reveal-delay-4">
           <div class="service-card-icon">📍</div>
           <h3>Local Demand Generation</h3>
           <p>GMB management, longtail SEO, review platforms, and hyper-local content — dominate your market before anyone even knows you're competing.</p>
           <a href="/services/local-demand" class="card-link">Learn more</a>
         </article>
 
-        <article class="service-card">
+        <article class="service-card reveal reveal-delay-5">
           <div class="service-card-icon">🔮</div>
           <h3>GEO &amp; Generative Search</h3>
           <p>When someone asks ChatGPT, Perplexity, or Gemini who to hire — your name comes up. We make that happen. It's the new SEO, and almost nobody else is doing it yet.</p>
           <a href="/ai-agents/geo-llm" class="card-link">Learn more</a>
         </article>
 
-        <article class="service-card">
+        <article class="service-card reveal reveal-delay-6">
           <div class="service-card-icon">⚙️</div>
           <h3>Workflow Automation</h3>
           <p>Replace hours of manual work with intelligent automations. CRM updates, follow-up sequences, reporting, scheduling — all hands-free.</p>
@@ -161,25 +161,25 @@ include __DIR__ . '/includes/nav.php';
   <!-- ══ HOW IT WORKS ════════════════════════════════════════════ -->
   <section class="section bg-light" aria-labelledby="process-heading">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="eyebrow">How It Works</span>
         <h2 id="process-heading">Built Different, From Day One</h2>
         <p>Most agencies hand off work to junior staff and freelancers. We deploy AI systems, then have humans review and refine. The output is better, faster, and cheaper.</p>
       </div>
       <div class="process-steps">
-        <div class="process-step">
+        <div class="process-step reveal reveal-delay-1">
           <h4>Demand Gap Audit</h4>
           <p>Cyrus, our AI research agent, maps your competitive landscape, keyword universe, and GEO citation opportunities before we write a single word.</p>
         </div>
-        <div class="process-step">
+        <div class="process-step reveal reveal-delay-2">
           <h4>Architecture &amp; Build</h4>
           <p>We build your site, content system, and agent infrastructure from the ground up — all wired to your CRM, Google, and AI platforms.</p>
         </div>
-        <div class="process-step">
+        <div class="process-step reveal reveal-delay-3">
           <h4>Content Engine On</h4>
           <p>Jasper and Miles generate, QA, and deploy SEO + GEO content on a daily cadence. Fresh signals every day. Algorithms love it.</p>
         </div>
-        <div class="process-step">
+        <div class="process-step reveal reveal-delay-4">
           <h4>Demand Flows</h4>
           <p>Amy's AI voice system handles inbound calls. The CRM auto-qualifies leads. You wake up to booked appointments, not inbox chaos.</p>
         </div>
@@ -190,7 +190,7 @@ include __DIR__ . '/includes/nav.php';
   <!-- ══ PORTFOLIO PREVIEW ═══════════════════════════════════════ -->
   <section class="section" aria-labelledby="portfolio-heading">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="eyebrow">Our Work</span>
         <h2 id="portfolio-heading">Clients Who Stand Out</h2>
         <p>Every business we work with looks and performs differently from their competitors. That's the whole point.</p>
