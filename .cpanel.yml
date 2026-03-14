@@ -4,7 +4,6 @@ deployment:
     - export DEPLOYPATH=/home/demandsignals/public_html/
     - /bin/cp -R $HOME/repositories/demandsignals-site/css $DEPLOYPATH
     - /bin/cp -R $HOME/repositories/demandsignals-site/js $DEPLOYPATH
-    - /bin/cp -R $HOME/repositories/demandsignals-site/assets $DEPLOYPATH
     - /bin/cp -R $HOME/repositories/demandsignals-site/img $DEPLOYPATH
     - /bin/cp -R $HOME/repositories/demandsignals-site/includes $DEPLOYPATH
     - /bin/cp -R $HOME/repositories/demandsignals-site/pages $DEPLOYPATH
