@@ -1,0 +1,22 @@
+/* Accessibility CSS — supporting styles for toolbar */
+/* SVG colorblind filters (hidden in DOM) */
+svg.a11y-filters { position: absolute; width:0; height:0; overflow:hidden; }
+
+/* Focus styles — global override for high visibility */
+body.high-contrast *:focus-visible {
+  outline: 4px solid #ffff00 !important;
+  outline-offset: 3px !important;
+}
+
+/* Large cursor SVG fallback */
+body.large-cursor {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M8 2L8 26L14 20L18 28L22 26L18 18L26 18Z' fill='%23000' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E") 0 0, auto !important;
+}
+
+/* OpenDyslexic fallback */
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: local('OpenDyslexic'),
+       url('https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.3/open-dyslexic-regular.woff') format('woff');
+  font-display: swap;
+}

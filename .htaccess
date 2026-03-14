@@ -1,0 +1,74 @@
+# ============================================================
+# DEMAND SIGNALS — .htaccess
+# Agent: add redirects in /includes/config.php $REDIRECTS
+# Do not add individual redirects here — use config.php
+# ============================================================
+
+Options -Indexes
+ServerSignature Off
+
+# ── PHP routing ──────────────────────────────────────────────
+DirectoryIndex index.php index.html
+
+# ── Clean URL routing ────────────────────────────────────────
+RewriteEngine On
+
+# Skip real files and directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# /services/xxx → hub or sub-page
+RewriteRule ^services/([a-z0-9-]+)/?$ /pages/services/$1.php [L]
+RewriteRule ^services/?$ /pages/services.php [L]
+
+# /ai-agents/xxx → hub or sub-page
+RewriteRule ^ai-agents/([a-z0-9-]+)/?$ /pages/ai-agents/$1.php [L]
+RewriteRule ^ai-agents/?$ /pages/ai-agents.php [L]
+
+# /tools/xxx → hub or sub-page
+RewriteRule ^tools/([a-z0-9-]+)/?$ /pages/tools/$1.php [L]
+RewriteRule ^tools/?$ /pages/tools.php [L]
+
+# /blog/slug → individual post
+RewriteRule ^blog/([a-z0-9_-]+)/?$ /pages/blog/$1.php [L]
+
+# Top-level pages
+RewriteRule ^(portfolio|about|blog|contact|easter-egg|privacy|terms|accessibility)/?$ /pages/$1.php [L]
+
+# Fallback to index.php (handles redirects from config.php)
+RewriteRule ^(.*)$ /index.php [L,QSA]
+
+# ── Custom 404 ───────────────────────────────────────────────
+ErrorDocument 404 /404.php
+
+# ── Security headers ─────────────────────────────────────────
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# ── Cache static assets ──────────────────────────────────────
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType video/mp4 "access plus 6 months"
+</IfModule>
+
+# ── Gzip compression ─────────────────────────────────────────
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json
+</IfModule>
+
+# ── Utility files via PHP ─────────────────────────────────────
+RewriteRule ^robots\.txt$ /api/robots.php [L]
+RewriteRule ^sitemap\.xml$ /api/sitemap.php [L]
+RewriteRule ^llms\.txt$ /api/llms.php [L]
