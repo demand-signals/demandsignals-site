@@ -8,38 +8,53 @@ ServerSignature Off
 DirectoryIndex index.php index.html
 
 RewriteEngine On
+RewriteBase /
 
-# ── Always pass static assets directly — no rewriting ────────
+# ── Always pass static assets directly ────────────────────────
 RewriteRule \.(css|js|png|jpg|jpeg|gif|webp|svg|ico|woff|woff2|ttf|eot|mp4|pdf)$ - [L]
 
-# Skip real files and directories
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-
-# /services/xxx
-RewriteRule ^services/([a-z0-9-]+)/?$ /pages/services/$1.php [L]
-RewriteRule ^services/?$ /pages/services.php [L]
-
-# /ai-agents/xxx
-RewriteRule ^ai-agents/([a-z0-9-]+)/?$ /pages/ai-agents/$1.php [L]
-RewriteRule ^ai-agents/?$ /pages/ai-agents.php [L]
-
-# /tools/xxx
-RewriteRule ^tools/([a-z0-9-]+)/?$ /pages/tools/$1.php [L]
-RewriteRule ^tools/?$ /pages/tools.php [L]
-
-# /blog/slug
-RewriteRule ^blog/([a-z0-9_-]+)/?$ /pages/blog/$1.php [L]
-
-# Top-level pages
-RewriteRule ^(portfolio|about|blog|contact|easter-egg|privacy|terms|accessibility)/?$ /pages/$1.php [L]
-
-# Utility files
+# ── Utility files ─────────────────────────────────────────────
 RewriteRule ^robots\.txt$ /api/robots.php [L]
 RewriteRule ^sitemap\.xml$ /api/sitemap.php [L]
 RewriteRule ^llms\.txt$ /api/llms.php [L]
+RewriteRule ^deploy\.php$ /deploy.php [L]
 
-# Fallback
+# ── Dynamic routing (skip real files/dirs) ────────────────────
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^services/([a-z0-9-]+)/?$ /pages/services/$1.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^services/?$ /pages/services.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ai-agents/([a-z0-9-]+)/?$ /pages/ai-agents/$1.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ai-agents/?$ /pages/ai-agents.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^tools/([a-z0-9-]+)/?$ /pages/tools/$1.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^tools/?$ /pages/tools.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^blog/([a-z0-9_-]+)/?$ /pages/blog/$1.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(portfolio|about|blog|contact|easter-egg|privacy|terms|accessibility)/?$ /pages/$1.php [L]
+
+# ── Fallback to index.php ─────────────────────────────────────
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /index.php [L,QSA]
 
 ErrorDocument 404 /404.php

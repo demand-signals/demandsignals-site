@@ -22,7 +22,7 @@ define('COLOR_DARK',   '#1d2330');
 
 // Asset URLs — agent: update if assets move
 define('ASSET_PENGUIN_VIDEO', 'https://base44.app/api/apps/68ccebd683c4aa87ed81a043/files/public/68ccebd683c4aa87ed81a043/d76594fa5_demand_signals_penguines_shity_one_v1a.mp4');
-define('ASSET_LOGO', '/img/dsig-logo.png');
+define('ASSET_LOGO', 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69a7735995dcd2da251c8bf7/efdd5a396_dsig_q2y25_logo_v2b.png');
 
 // ── Navigation — agent: add/remove/reorder items here ────────
 $NAV_ITEMS = [
